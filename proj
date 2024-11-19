@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+cd /home/$USER/Desktop/Projects/$3
+
+if [ $1 ]; then
+    if test $1 = "-w"; then
+        gnome-terminal --window
+    else
+        gnome-terminal --tab 
+    fi
+else
+    gnome-terminal --tab
+fi

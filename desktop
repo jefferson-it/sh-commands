@@ -1,0 +1,19 @@
+#!/bin/bash
+
+cd /home/$USER/Desktop/
+
+if [ $1 ]; then
+    if test $1 = "-y"; then
+        ls
+    fi
+fi
+
+if [ $2 ]; then
+    if test $2 = "-w"; then
+        gnome-terminal --window
+    else
+        gnome-terminal --tab 
+    fi
+else
+    gnome-terminal --tab
+fi
